@@ -1,0 +1,126 @@
+.college-name {
+  font-size: 12px; /* Adjust the font size as needed */
+  position: fixed; /* Position the text absolutely */
+  top: 120px; /* Adjust the top position to 0 */
+  left: 50%;
+  color: #f9f9f9; /* Set font color to white */
+  font-family: "Euclid Circular A", "Poppins";
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 999; /* Ensure it's above other elements */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  gap: 50px;
+  margin: 0;
+  height: 100vh;
+  padding: 0 32px;
+  background: url("https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?t=st=1711358975~exp=1711362575~hmac=f4ad1cdcc90fe5a26b93ecabe945300e7930e773fb7ff1587c371c259aeed228&w=996") center/cover no-repeat;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+@media (width >= 500px) {
+  body {
+    padding: 0;
+  }
+}
+
+.background {
+  position: fixed;
+  top: -50vmin;
+  left: -50vmin;
+  width: 100vmin;
+  height: 100vmin;
+  border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+
+}
+
+
+.card {
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  width: 94%;
+  margin: 0 20px;
+  padding: 170px 30px 54px;
+  border-radius: 24px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -880px;
+  left: 50%;
+  translate: -50% 0;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: #e27509;
+}
+
+@media (width >= 500px) {
+  .card {
+    margin: 0;
+    width: 360px;
+  }
+}
+
+.card .logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 64px;
+  border-radius: 20%;
+}
+
+.card > h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 0 38px;
+  color: rgb(0, 0, 0);
+}
+
+.form {
+  margin: 0 0 44px;
+  display: grid;
+  gap: 12px;
+}
+
+.form :is(input, button) {
+  width: 100%;
+  height: 56px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.form > input {
+  border: 0;
+  padding: 0 24px;
+  color: #222222;
+  background: #ededed;
+}
+
+.form > input::placeholder {
+  color: rgb(0 0 0 / 28%);
+}
+
+.form > button {
+  border: 0;
+  color: #f9f9f9;
+  background: #e27509;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}

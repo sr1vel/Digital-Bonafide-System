@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items:left;
+  justify-content: left;
+  margin: 0;
+  height: 100vh;
+  background: #f8f8f8;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.container {
+  display: flex;
+  justify-content: left;
+}
+.text-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.h4 {
+  text-align: center;
+  font-size: 2.1rem;
+  color: #092a47;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+.h5 {
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: #000000; /* Font color */
+  font-family: "Euclid Circular A", "Poppins"; /* Font family */
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  margin-top: 20px; /* Adjust top margin as needed */
+  margin-right: 20px; /* Adjust right margin as needed */
+}
+
+.h6 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000000;
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  margin-top: 8px; /* Adjust top margin as needed */
+  margin-right: 20px;
+  font-family: "Euclid Circular A", "Poppins";
+}
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  width: 75vw;
+  max-width: 350px;
+  padding: 50px 30px 50px 20px;
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 20px;
+  margin-right: 20px; /* Adjust spacing between cards */
+  transition: transform 0.3s ease-in-out;
+  margin-left: 300px;
+  margin-top: 120px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  max-width: 280px;
+  width: 35vw;
+  height: 300px;
+  object-fit: cover;
+  margin-left: 0px;
+  margin-right: 30px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.5;
+}
+
+.card button {
+  border: 1px solid #000000;
+  background: transparent;
+  color: #000000;
+  font-family: inherit;
+  padding: 16px 26px;
+  font-size: 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #092a47; /* Blue hover color */
+  border-color: #092a47; /* Matching border color */
+  color: #fff; /* Text color */
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box; /* Add this to include padding and border in element's total width and height */
+}
+
+html, body {
+  height: 100%; /* Ensure the body takes up the full height */
+}
+
+.align-left {
+text-align: center;
+}
+
+.login-img img {
+  margin-left: 90px; /* Adjust the value as needed to move the image to the left */
+}
+
+.form-login-body .top-menu {
+  box-shadow: 0 0 10px 0 #00000026;
+  background-color: #092a47;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0; /* Maintain a reasonable padding for the header */
+}
+
+.form-login-body .top-menu .logo img {
+  max-width: 400px; /* Increase the size of the logo */
+  width: 100%;
+  height: auto;
+  margin-top: 7px;
+  margin-left:0;
+  margin-right: 40px;
+  display: block;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 748px) {
+  .form-login-body .top-menu .logo img {
+      max-width: 300px; /* Adjust size for small screens */
+  }
+}
+
+@media (min-width: 749px) {
+  .form-login-body .top-menu .logo img {
+      margin-left: 40px; /* Original margin-left for larger screens */
+      max-width: 500px; /* Ensuring the logo is appropriately sized */
+  }
+}
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.logout button {
+  background-color: #ffffff; /* Blue hover color */
+  border-color: #ffffff; /* Matching border color */
+  color: #000000;/* Text color */
+  padding: 8px 16px; /* Adjust padding as needed */
+  border-radius: 20px; /* Adjust border radius as needed */
+  font-family: "Poppins";
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.logout button:hover {
+  background-color:#092a47 !important; /* Darker red hover color */
+  border-color:#092a47 !important; /* Matching hover border color */
+  color:#ffffff
+}

@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    height: 100vh;                /* Set the body height to full viewport height */
+    overflow: hidden;             /* Prevent scrolling */
+}
+
+.container {
+    display: flex;                /* Use flexbox for layout */
+    justify-content: center;      /* Center the cards horizontally */
+    align-items: center;          /* Center the cards vertically */
+    height: calc(100vh - 200px); /* Subtract the navbar height from the total height */
+    flex-wrap: wrap;              /* Allow cards to wrap to the next line if needed */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #092a47;
+    color: #fff;
+    padding: 20px;
+    height: 80px;                /* Set the navbar height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;      /* Stack content vertically */
+    align-items: center;         /* Center content horizontally */
+    width: 400px;                /* Fixed width for cards */
+    height: 300px;               /* Fixed height for cards */
+    padding: 30px;
+    background: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    border-radius: 25px;
+    margin: 20px;                /* Space between cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for box-shadow */
+    pointer-events: auto;        /* Ensure hover effects are enabled */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.card img {
+    max-width: 100%;             /* Responsive image width */
+    height: auto;                /* Maintain aspect ratio */
+    object-fit: cover;           /* Cover the area */
+    border-radius: inherit;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 30px;             /* Adjusted font size for heading */
+    font-weight: 400;
+    margin: 20px 0;              /* Increased margin for heading */
+}
+
+.card button {
+    border: 1px solid #000000;
+    background: transparent;
+    color: #000000;
+    padding: 15px 25px;          /* Increased padding for button */
+    font-size: 18px;             /* Adjusted font size for button */
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card button:hover {
+    background-color: #092a47; /* Blue hover color */
+    border-color: #092a47; /* Matching border color */
+    color: #fff; /* Text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center;     /* Center cards horizontally */
+    }
+
+    .card {
+        width: 90%;             /* Full width on small screens */
+        height: auto;           /* Auto height to fit content */
+    }
+    .card button {
+        background-color: #092a47; /* Blue background color */
+        color: #fff; /* Text color */
+        border-color: #092a47; /* Matching border color */
+    }
+    .card button:hover {
+        background-color: #092a47; /* Blue hover color */
+        border-color: #092a47; /* Matching border color */
+        color: #fff; /* Text color */
+    }
+    
+}

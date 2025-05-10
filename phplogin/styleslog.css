@@ -1,0 +1,83 @@
+.gradient-custom-2 {
+    /* Fallback for old browsers */
+    background: #fcfcfc;
+    color: #121212;
+  }
+  
+  .gui {
+    background: linear-gradient(to right, #092a47, #0b3b5c, #0d4c72, #0f5d89);
+    color: #fcfcfc;
+  }
+  .tit{
+    margin-top: 150px;
+  }
+  .login {
+    height: auto; /* Make it responsive */
+  }
+  
+  .guidelines {
+
+    color: #000000; /* Text color for guidelines */
+  }
+  
+  .gui-card {
+    max-width: 300px; /* Set a maximum width for the guidelines card */
+    width: 100%; /* Make it responsive */
+  }
+  .btn-primary {
+    background-color:#092a47; /* Primary button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+  
+  }
+  
+  .btn-primary:hover {
+    background-color: #51a5ff; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+  }
+  
+  @media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh !important;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+        border: none; /* Remove border from the card on small screens */
+    }
+    .tit{
+      margin-top: 1px;
+    }
+    .gui {
+        order: -1; /* Move guidelines to the top */
+        background: transparent; /* Ensure no background */
+        color: #121212 !important; /* Change text color to black on small screens */
+        margin-top: 4px; /* Add margin to the top */
+    }
+  }
+  
+  /* Additional styles for centering content */
+  .gui .card {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  
+  .gui .card-body {
+    padding: 1rem !important; /* Adjust padding for the guidelines card */
+    margin: 0.5rem !important; /* Adjust margin for the guidelines card */
+  }
+  
+  

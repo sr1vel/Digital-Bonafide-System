@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .layout {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-rows:
+        4rem 6rem auto 6rem 6rem 6rem 4rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'header' 
+        'sidebar-left'
+        'main' 
+        'widget'
+        'statistics'
+        'sidebar-right'
+        'logout' 
+        'footer';
+    height: 100vh;
+  }
+  
+  @media (min-width: 420px) {
+    .layout {
+        display: grid;
+        grid-template-rows: 4rem 6rem auto 8rem 6rem 4rem;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'header header'
+            'sidebar-left sidebar-left'
+            'main main'
+            'logo logo'
+            'widget statistics'
+            'sidebar-right sidebar-right'
+            'footer footer';
+    }
+  }
+  
+  @media (min-width: 720px) {
+    .layout {
+        display: grid;
+        grid-template-rows: 4rem auto 8rem 4rem;
+        grid-template-columns: 10rem auto auto 10rem;
+        grid-template-areas:
+            'header header header header'
+            'sidebar-left main main sidebar-right'
+            'sidebar-left widget statistics sidebar-right'
+            'footer footer footer footer';
+    }
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between; /* Aligns logo and logout button */
+    align-items: center; /* Centers content vertically */
+    padding: 0.5rem 1rem; /* Add some padding */
+    background-color: #092a47; /* Optional: background color */
+    height: 3rem; /* Reduces header height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  .navbar-logo {
+    height: 2rem; /* Ensures the logo scales with the header */
+    max-width: 100%; /* Responsive logo */
+  }
+  
+  
+  .logout {
+  position: fixed; /* Allows positioning relative to header */
+  top: 70px; /* Adjust as needed for vertical spacing */
+  right: 20px; /* Adjust for horizontal spacing from the right */
+  }
+  
+  .logout button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #092a47;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+  .logout button:hover {
+  background-color: #1b619f;
+  color: rgb(255, 255, 255);
+  /* Lighter shade on hover */
+  }
+  .logout1 {
+    position: fixed; /* Allows positioning relative to header */
+    top: 70px; /* Adjust as needed for vertical spacing */
+    right: 120px; /* Adjust for horizontal spacing from the right */
+  }
+  
+  .logout1 button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #092a47;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .logout1 button:hover {
+    background-color: #1b619f; /* Lighter shade on hover */
+    color: rgb(255, 255, 255);
+  }
+  
+  /* General body styling */
+  .form-login-body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container and spacing for the table */
+  .container-fluid {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Table styling */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px; /* Add space between columns */
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-collapse: collapse; /* Ensure border-spacing takes effect */
+  }
+  
+  
+  /* Add border to each cell */
+  table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd; /* This will create a line between each column */
+  }
+  
+  /* Header row styling */
+  table thead {
+    background-color: #092a47;
+    color: #ffffff;
+  }
+  
+  table th {
+    font-size: 16px;
+  }
+  
+  /* Table body row styling */
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  
+  table td {
+    font-size: 14px;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Button styling */
+  .btn {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 14px;
+    text-align: center;
+    width: 150px; /* Set a fixed width for all buttons to make them the same size */
+    margin: 5px; /* Add some space between the buttons */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 24px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .download-btn {
+    background-color: #092a47;
+  }
+  
+  .download-btn:hover {
+    background-color: #007bff;
+  }
+  
+  /* Checkbox container */
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Form and Button container */
+  #buttonContainer_ {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+  }
+  
+  form input[type="hidden"] {
+    display: none;
+  }
+  
+  /* Message for no files uploaded */
+  td[colspan="10"] {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    padding: 20px 0;
+  }
+  
+  /* Style for Reject/Approve/Generate PDF buttons */
+  #rejectForm_ .btn,
+  #approveForm_ .btn,
+  form .btn {
+    margin-right: 10px;
+  }
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box; /* Add this to include padding and border in element's total width and height */
+  }
+  
+  html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .login-img img {
+    margin-left: 100px; /* Adjust the value as needed to move the image to the left */
+  }
+  
+  .form-login-body .top-menu {
+    box-shadow: 0 0 10px 0 #00000026;
+    background-color: #092a47;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0; /* Maintain a reasonable padding for the header */
+  }
+  
+  .form-login-body .top-menu .logo img {
+    max-width: 400px; /* Increase the size of the logo */
+    width: 100%;
+    height: auto;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  /* Navigation Bar Styles */
+  .navbar {
+    background-color: #ffffff; /* White background for the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #092a47; /* Logo text color */
+  }
+  
+  .navbar .navbar-brand:hover {
+    color: #092a47; /* Darker color on hover */
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #333333; /* Link color */
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #092a47; /* Link color on hover */
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+  
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+  
+    .navbar-nav .nav-item .nav-link {
+        text-align: center;
+        padding: 1rem;
+    }
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 748px) {
+    .form-login-body .top-menu .logo img {
+        max-width: 300px; /* Adjust size for small screens */
+    }
+  }
+  
+  @media (min-width: 749px) {
+    .form-login-body .top-menu .logo img {
+        margin-left: 60px; /* Original margin-left for larger screens */
+        max-width: 400px; /* Ensuring the logo is appropriately sized */
+    }
+  }
+
+
+
+.background {
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 50%;
+}
+
+.mt-5 {
+    margin-top: 75px; /* Adjust the margin-top to ensure it's right under the navbar */
+}
+
+
+.card {
+    border: none;
+    border-radius: 25px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.card > h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    margin: 0 0 20px;
+    color: rgb(0, 0, 0);
+}
+
+.form {
+    margin: 0 0 20px;
+    display: grid;
+    font-family: "Roboto", sans-serif;
+    gap: 8px;
+}
+
+.form :is(input, button) {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.form > input {
+    border: 0;
+    padding: 0 10px;
+    color: #222222;
+    background: #ededed;
+}
+
+.form > input::placeholder {
+    color: rgba(0, 0, 0, 0.28);
+}
+
+.form > button {
+    border: 0;
+    color: #f9f9f9;
+    background:#092a47 ;
+    display: grid;
+    font-family: "Roboto", sans-serif;
+    place-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table .table {
+    background-color: #fff;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.logout-btn,
+.goBack button,
+.logout button {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.logout-btn:hover,
+.goBack button:hover,
+.logout button:hover {
+    background-color: #206aab !important;
+    border-color: #206aab !important;
+    color: #ffffff;
+}
+.custom-btn {
+    background-color: #ffffff; /* Red background */
+    color: rgb(6, 2, 2); /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px;
+    background-color: #092a47;
+    border-color: #092a47;
+    color: #fff; /* Rounded corners */
+    font-size: 1.0rem;
+    font-family: "Roboto", sans-serif;
+  }
+  
+.custom-btn:hover {
+    background-color: #206aab !important;
+    border-color: #206aab !important;
+    color: #ffffff !important;
+}
+
+
+.download-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.btn-primary.download-btn {
+    background-color: #092a47;
+    border-color:#092a47;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.btn-primary.download-btn:hover {
+    background-color: #206aab;
+    border-color: #206aab;
+    color: #fff;
+}
+
+.form input[type="checkbox"] {
+    transform: scale(0.4);
+}
+
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+    background-color: #092a47 !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
+.goBack {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+}
+
+.logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
